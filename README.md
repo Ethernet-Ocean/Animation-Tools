@@ -118,5 +118,69 @@ int main(int argc, char** argv) {
     glutMainLoop();
     return 0;
 }
+//Triangle 
 
+ #include <GL/glut.h>
+
+
+
+void display() {
+
+  // Clear the color buffer
+
+  glClear(GL_COLOR_BUFFER_BIT);
+
+  
+
+  // Draw a triangle
+
+  glBegin(GL_TRIANGLES);
+
+  glVertex2f(-0.5f, -0.5f);
+
+  glVertex2f(0.5f, -0.5f);
+
+  glVertex2f(0.0f, 0.5f);
+
+  glEnd();
+
+  
+
+  // Swap the buffers to display the image
+
+  glutSwapBuffers();
+
+}
+
+
+
+int main(int argc, char** argv) {
+
+  // Initialize GLUT
+
+  glutInit(&argc, argv);
+
+  glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+
+  glutInitWindowSize(400, 400);
+
+  glutCreateWindow("OpenGL Example");
+
+
+
+  // Set the display function
+
+  glutDisplayFunc(display);
+
+
+
+  // Start the main loop
+
+  glutMainLoop();
+
+  
+
+  return 0;
+
+}
     // END
